@@ -1,3 +1,4 @@
 FROM alpine:latest
 
-ENTRYPOINT [ "/usr/sbin/crond", "-f" ]
+COPY entrypoint.sh /
+ENTRYPOINT [ "/bin/sh", "/entrypoint.sh" ]
