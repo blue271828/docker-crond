@@ -1,3 +1,3 @@
 #!/bin/sh
 
-/usr/sbin/crond -f
+/usr/sbin/crond -f -l ${LOG_LEVEL}
