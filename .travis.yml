@@ -1,0 +1,11 @@
+language: ruby
+cache: bundler
+
+services:
+  - docker
+
+before_install:
+  - docker build -t crond .
+
+script:
+  - bundle exec rspec
