@@ -1,5 +1,7 @@
 # docker-crond
 
+[![Build Status](https://travis-ci.org/blue271828/docker-crond.svg?branch=master)](https://travis-ci.org/blue271828/docker-crond)
+
 
 
 ## Environment variables
