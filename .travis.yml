@@ -5,7 +5,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t crond .
+  - docker build -t crond:0.0.1 .
 
 script:
   - bundle exec rspec

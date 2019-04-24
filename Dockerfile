@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.9.3
 LABEL maintainer="blue271828"
 
 RUN apk --update --no-cache add tzdata
