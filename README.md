@@ -1,5 +1,9 @@
 # docker-crond
 
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/blue271828/crond.svg)
+
+![Docker Pulls](https://img.shields.io/docker/pulls/blue271828/crond.svg)
+
 
 
 ## Environment variables
@@ -14,4 +18,40 @@ You can run this image with the following environment variables if you need.
 | `LOG_LEVEL` | `8`     | Set log level. This corresponds to crond `-l` option.        |
 | `LOG_FILE`  | -       | Set log file. This corresponds to crond `-L` option.         |
 | `CRONTAB`   | -       | Set cron setting. If you set this variable. User's crontab file is overwritten on launch. |
+
+
+
+## How to run
+
+
+
+### docker command
+
+```bash
+$ docker run -it \
+		-e CRONTAB='* * * * * echo "hello crond!"' \
+		blue271828/crond
+```
+
+
+
+### docker-compose
+
+```yaml
+version: '3'
+services:
+  crond:
+    image: blue271828/crond
+    environment:
+      TZ: Asia/Tokyo
+      LOG_LEVEL: 1
+      LOG_FILE: /var/log/crond/crond.log
+      CRONTAB: |
+        * * * * * echo "hello crond!"
+        * * * * * date
+    volumes:
+      - ./crond:/var/log/crond
+```
+
+
 
