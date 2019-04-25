@@ -6,36 +6,40 @@
 
 
 
-## Environment variables
+## Usage
 
-You can run this image with the following environment variables if you need.
-
-
-
-| Variable    | Default | Description                                                  |
-| ----------- | ------- | ------------------------------------------------------------ |
-| `TZ`        | `UTC`   | Set time zone. Refer to [List of tz database time zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) If you set arbitrary time zone. |
-| `LOG_LEVEL` | `8`     | Set log level. This corresponds to crond `-l` option.        |
-| `LOG_FILE`  | -       | Set log file. This corresponds to crond `-L` option.         |
-| `CRONTAB`   | -       | Set cron setting. If you set this variable. User's crontab file is overwritten on launch. |
-
-
-
-## How to run
-
-
-
-### docker command
+This project provides container images on [Docker Hub](https://hub.docker.com/r/blue271828/crond) . 
 
 ```bash
-$ docker run -it \
-		-e CRONTAB='* * * * * echo "hello crond!"' \
-		blue271828/crond
+$ docker pull blue271828/crond
 ```
 
 
 
-### docker-compose
+### Environment variables
+
+When you launch the image, you can configure some options.
+
+| Variable    | Default | Description                                                  |
+| ----------- | ------- | ------------------------------------------------------------ |
+| `TZ`        | `UTC`   | Change the time zone in the container.<br />Refer to [List of tz database time zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) If you set an arbitrary time zone. |
+| `LOG_LEVEL` | `8`     | Set log level for crond.<br />This corresponds to crond `-l` option. |
+| `LOG_FILE`  | -       | Set a log file for crond.<br />This corresponds to crond `-L` option. |
+| `CRONTAB`   | -       | Set crontab settings.<br />If you set this variable. User's crontab file is overwritten on launch. |
+
+
+
+### Example
+
+A container will output “hello crond!” every minute when you type the following command.
+
+```bash
+$ docker run -it -e CRONTAB='* * * * * echo "hello crond!"' blue271828/crond
+```
+
+
+
+If you want to run with Docker Compose, the compose file looks like below.
 
 ```yaml
 version: '3'
@@ -52,6 +56,5 @@ services:
     volumes:
       - ./crond:/var/log/crond
 ```
-
 
 
