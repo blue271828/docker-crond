@@ -1,0 +1,13 @@
+file:
+  /entrypoint.sh:
+    exists: true
+    mode: "0644"
+    owner: root
+    group: root
+    filetype: file
+package:
+  tzdata:
+    installed: true
+process:
+  crond:
+    running: true
