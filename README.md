@@ -1,7 +1,11 @@
 # docker-crond
 
-![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/blue271828/crond.svg)
-![Docker Pulls](https://img.shields.io/docker/pulls/blue271828/crond.svg)
+<a href="https://hub.docker.com/r/blue271828/crond">
+  <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/blue271828/crond.svg">
+</a>
+<a href="https://hub.docker.com/r/blue271828/crond/builds">
+  <img alt="Docker Cloud Build Status" src="https://img.shields.io/docker/cloud/build/blue271828/crond.svg">
+</a>
 
 
 
