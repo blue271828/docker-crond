@@ -1,7 +1,7 @@
 file:
   /entrypoint.sh:
     exists: true
-    mode: "0644"
+    mode: "0400"
     owner: root
     group: root
     filetype: file
