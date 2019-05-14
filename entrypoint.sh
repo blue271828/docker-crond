@@ -1,8 +1,5 @@
 #!/bin/sh
 
-if [ -n "${CRONTAB}" ]; then
-  echo "${CRONTAB}" > /etc/crontabs/root
-fi
 
 OPTIONS=""
 if [ -n "${LOG_LEVEL}" ]; then
@@ -10,6 +7,12 @@ if [ -n "${LOG_LEVEL}" ]; then
 fi
 if [ -n "${LOG_FILE}" ]; then
   OPTIONS="${OPTIONS} -L ${LOG_FILE}"
+fi
+
+if [ -n "${CRONTAB}" ]; then
+  echo "${CRONTAB}" > /etc/crontabs/root
+elif [ -n "${CRONTAB_FILE}" ]; then
+  cat "${CRONTAB_FILE}" > /etc/crontabs/root
 fi
 
 /usr/sbin/crond -f ${OPTIONS}
