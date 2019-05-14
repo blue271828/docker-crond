@@ -18,12 +18,13 @@ $ docker pull blue271828/crond
 
 When you launch the image, you can configure some options.
 
-| Variable    | Default | Description                                                  |
-| ----------- | ------- | ------------------------------------------------------------ |
-| `TZ`        | `UTC`   | Change the time zone in the container.<br />Refer to [List of tz database time zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) If you set an arbitrary time zone. |
-| `LOG_LEVEL` | `8`     | Set log level for crond.<br />This corresponds to crond `-l` option. |
-| `LOG_FILE`  | -       | Set a log file for crond.<br />This corresponds to crond `-L` option. |
-| `CRONTAB`   | -       | Set crontab settings.<br />If you set this variable. User's crontab file is overwritten on launch. |
+| Variable       | Default | Description                                                  |
+| -------------- | ------- | ------------------------------------------------------------ |
+| `TZ`           | `UTC`   | Change the time zone in the container.<br />Refer to [List of tz database time zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) If you set an arbitrary time zone. |
+| `LOG_LEVEL`    | `8`     | Set log level for crond.<br />This corresponds to crond `-l` option. |
+| `LOG_FILE`     | -       | Set a log file for crond.<br />This corresponds to crond `-L` option. |
+| `CRONTAB`      | -       | Set crontab settings.<br />If you set this variable. User's crontab file is overwritten on launch. |
+| `CRONTAB_FILE` | -       | Set crontab settings by file.<br />This file is ignored if you set `CRONTAB` env. |
 
 
 
