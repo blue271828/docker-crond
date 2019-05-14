@@ -1,14 +1,12 @@
 # docker-crond
 
-<a href="https://hub.docker.com/r/blue271828/crond">
-  <img alt="Docker Cloud Build Status" src="https://img.shields.io/docker/cloud/build/blue271828/crond.svg">
-</a>
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/blue271828/crond.svg)](https://hub.docker.com/r/blue271828/crond)
 
 
 
 ## Usage
 
-This project provides container images on [Docker Hub](https://hub.docker.com/r/blue271828/crond) . 
+This project provides container images on [Docker Hub](https://hub.docker.com/r/blue271828/crond) .
 
 ```bash
 $ docker pull blue271828/crond
@@ -56,5 +54,3 @@ services:
     volumes:
       - ./crond:/var/log/crond
 ```
-
-
