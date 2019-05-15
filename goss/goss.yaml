@@ -6,6 +6,8 @@ file:
     group: root
     filetype: file
 package:
+  docker:
+    installed: true
   tzdata:
     installed: true
 process:
