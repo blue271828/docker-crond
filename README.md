@@ -55,3 +55,16 @@ services:
     volumes:
       - ./crond:/var/log/crond
 ```
+
+
+
+## Testing
+
+You can test manually with the below command. This project is using dgoss (dgoss is docker wrapper around [Goss](https://github.com/aelsabbahy/goss)) for testing. Before deploying a new docker image to Docker Hub, this testing script is kicked by [Automated builds](https://docs.docker.com/docker-hub/builds/).
+
+
+
+```bash
+$ docker-compose -f docker-compose.test.yml run sut
+```
+
