@@ -1,4 +1,9 @@
 file:
+  /usr/local/bin/docker:
+    exists: true
+    mode: "0755"
+    size: 50699450
+    filetype: file
   /entrypoint.sh:
     exists: true
     mode: "0400"
@@ -6,7 +11,7 @@ file:
     group: root
     filetype: file
 package:
-  docker:
+  curl:
     installed: true
   tzdata:
     installed: true
